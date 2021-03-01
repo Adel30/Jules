@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap');
+
+:root{
+    --color1: -30px -20px rgba(0,0,0,.1)inset;
+    --color2: -70px -40px rgba(0,0,0,.1)inset;
+    --color3: 5px 5px rgba(225,225,225,.2)inset;
+}
+
+body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body{
+    background: -webkit-radial-gradient(rgb(139, 212, 255) 10%, #80caf5 25%, #4dafff 80%);
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+}
+
+h1{
+    font-weight: 200;
+    color: black;
+}
+
+h2{
+    font-weight: 300;
+}
+
+.nubes,.mapa{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.nubes{
+    height: 220px;
+    width: 220px;
+}
+
+.nubes img{
+    position: relative;
+    z-index: 20;
+}
+
+.mapa{
+    background: url(../img/mapa.png);
+    height: 200px;
+    width: 200px;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: var(--color1),
+                var(--color2),
+                var(--color3);
+    -webkit-animation: ann 4s infinite linear;            
+
+}
+
+@-webkit-keyframes ann{
+    from{
+        background-position: left center ;
+    }
+    to{
+        background-position: -396px center;
+    }
+}
